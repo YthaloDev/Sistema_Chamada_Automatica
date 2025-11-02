@@ -1,0 +1,75 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'pagina_web/chamada.css' %}">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamada - Área do Professor</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="icon">
+                        <img src="{% static 'pagina_web/images/iconprofessor.jpg' %}" alt="Logo">
+                    </div>
+                    <div class="text">
+                        <h1>Área do Professor</h1>
+                        <p>Sistema de Gestão Escolar</p>
+                    </div>
+                </div>
+                <a class="back-button" id="backButton"href="{% url 'pagina_web:index' %}">Voltar ao Dashboard</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="chamada-section">
+                <h2>Chamada - Turma 3A</h2>
+                <p>02/11/2025</p>
+
+                <!-- Lista de alunos -->
+                <div class="aluno-list">
+                    <div class="aluno-item">
+                        <span>Ana Silva</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                    <div class="aluno-item">
+                        <span>Bruno Santos</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                    <div class="aluno-item">
+                        <span>Carlos Oliveira</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                    <div class="aluno-item">
+                        <span>Diana Costa</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                    <div class="aluno-item">
+                        <span>Eduardo Lima</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                    <div class="aluno-item">
+                        <span>Fernanda Souza</span>
+                        <button class="btn-present">Presente</button>
+                        <button class="btn-absent">Ausente</button>
+                    </div>
+                </div>
+
+                <!-- Botão para salvar a chamada -->
+                <button class="save-btn">Salvar Chamada</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

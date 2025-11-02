@@ -141,6 +141,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.action-btn #qrbutton li{
+    text-decoration: none;
+    list-style: none;
+}
+
 .action-btn:hover {
     background-color: var(--primary-hover);
 }

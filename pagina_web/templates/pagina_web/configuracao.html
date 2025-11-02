@@ -1,0 +1,79 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'pagina_web/configuracao.css' %}">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Turmas - Área do Professor</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="icon">
+                        <img src="{% static 'pagina_web/images/iconprofessor.jpg' %}" alt="Logo">
+                    </div>
+                    <div class="text">
+                        <h1>Área do Professor</h1>
+                        <p>Sistema de Gestão Escolar</p>
+                    </div>
+                </div>
+                <a class="back-button" id="backButton"href="{% url 'pagina_web:index' %}">Voltar ao Dashboard</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="turmas-section">
+                <h2>Gerenciar Turmas</h2>
+
+                <!-- Botão para adicionar nova turma -->
+                <button class="new-turma-btn">+ Nova Turma</button>
+
+                <!-- Lista de turmas -->
+                <div class="turma-list">
+                    <div class="turma-item">
+                        <div class="turma-info">
+                            <span class="turma-name">Turma 3A</span>
+                            <span class="turma-alunos">25 alunos</span>
+                            <span class="turma-horario">Segunda 08:00</span>
+                        </div>
+                        <div class="turma-actions">
+                            <button class="edit-btn">🖉</button>
+                            <button class="delete-btn">🗑️</button>
+                        </div>
+                    </div>
+
+                    <div class="turma-item">
+                        <div class="turma-info">
+                            <span class="turma-name">Turma 3B</span>
+                            <span class="turma-alunos">28 alunos</span>
+                            <span class="turma-horario">Terça 10:00</span>
+                        </div>
+                        <div class="turma-actions">
+                            <button class="edit-btn">🖉</button>
+                            <button class="delete-btn">🗑️</button>
+                        </div>
+                    </div>
+
+                    <div class="turma-item">
+                        <div class="turma-info">
+                            <span class="turma-name">Turma 4A</span>
+                            <span class="turma-alunos">22 alunos</span>
+                            <span class="turma-horario">Quarta 14:00</span>
+                        </div>
+                        <div class="turma-actions">
+                            <button class="edit-btn">🖉</button>
+                            <button class="delete-btn">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

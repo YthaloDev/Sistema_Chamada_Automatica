@@ -14,6 +14,9 @@
         <header class="header">
             <div class="header-content">
                 <div class="logo">
+                    <div class="icon">
+                        <img src="{% static 'pagina_web/images/iconprofessor.jpg' %}" alt="Logo">
+                    </div>
                     <div class="text">
                         <h1>Área do Professor</h1>
                         <p>Sistema de Gestão Escolar</p>
@@ -37,17 +40,17 @@
                 <div class="card" id="attendanceCard">
                     <h3>Visualizar Chamada</h3>
                     <p>Faça a chamada dos alunos e registre a presença em tempo real</p>
-                    <button class="action-btn">Acessar</button>
+                     <a class="action-btn" href="{% url 'pagina_web:chamada' %}">Acessar</a>
                 </div>
                 <div class="card" id="classesCard">
                     <h3>Gerenciar Turmas</h3>
                     <p>Configure e organize suas turmas, horários e alunos</p>
-                    <button class="action-btn">Acessar</button>
+                     <a class="action-btn" href="{% url 'pagina_web:configuracao' %}">Acessar</a>
                 </div>
                 <div class="card" id="qrcodeCard">
                     <h3>Gerar QR Code</h3>
                     <p>Crie QR Codes para check-in automático dos alunos</p>
-                    <button class="action-btn">Acessar</button>
+                    <a class="action-btn" href="{% url 'pagina_web:qrcode' %}">Acessar</a>
                 </div>
             </section>
         </main>
@@ -55,15 +58,6 @@
 
     <script>
         document.getElementById("backButton").style.display = "none"; // Esconder o botão de voltar inicialmente
-        document.getElementById("attendanceCard").addEventListener("click", function() {
-            alert("Abrindo Visualizar Chamada...");
-        });
-        document.getElementById("classesCard").addEventListener("click", function() {
-            alert("Abrindo Gerenciar Turmas...");
-        });
-        document.getElementById("qrcodeCard").addEventListener("click", function() {
-            alert("Abrindo Gerar QR Code...");
-        });
     </script>
 </body>
 </html>

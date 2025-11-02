@@ -1,0 +1,170 @@
+/* styles.css */
+
+/* Definindo cores e estilo básico */
+:root {
+    --background: #f7f9fc;
+    --header-background: #0400ff;
+    --foreground: #333;
+    --button-background: #007bff;
+    --button-hover: #0056b3;
+    --card-background: #fff;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --button-text-color: #fff;
+    --text-muted: #777;
+    --text-logo:#fff;
+}
+
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--header-background);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 14px;
+    color: var(--text-logo);
+}
+
+.back-button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #fff;
+    color: var(--header-background);
+}
+
+/* Seção de Chamada */
+.chamada-section {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.chamada-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.chamada-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--text-muted);
+}
+
+/* Lista de alunos */
+.aluno-list {
+    margin-bottom: 30px;
+}
+
+.aluno-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.aluno-item span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Botões de Presente / Ausente */
+.btn-present {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-absent {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Botão de salvar chamada */
+.save-btn {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: var(--button-hover);
+}

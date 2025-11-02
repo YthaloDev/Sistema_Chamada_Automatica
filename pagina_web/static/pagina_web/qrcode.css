@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* Definição das cores e gradientes */
+:root {
+    --background: #f7f9fc; /* Cor de fundo clara */
+    --header-background: #0400ff; /* Verde para o cabeçalho */
+    --foreground: #333333; /* Cor do texto */
+    --card-background: #ffffff; /* Cor de fundo dos cards */
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra dos cards */
+    --primary: #007bff; /* Cor dos botões */
+    --primary-hover: #0056b3; /* Cor ao passar o mouse nos botões */
+    --muted-text: #ffffff; /* Cor do texto menos importante */
+    --border-radius: 10px; /* Arredondamento das bordas */
+}
+
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--header-background);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 14px;
+    color: var(--muted-text);
+}
+
+.back-button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #ffffff;
+    color: var(--header-background);
+}
+
+/* QR Section */
+.qr-section {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.qr-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.qr-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: var(--primary-hover);
+}
