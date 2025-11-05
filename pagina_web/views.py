@@ -8,7 +8,7 @@ def index(request):
     return render(request, "pagina_web/index.html")
 
 
-def qrcode(request):
+def qrcode_view(request):
     return render(request, 'pagina_web/qrcode.html')
 
 
