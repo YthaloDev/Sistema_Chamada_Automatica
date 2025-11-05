@@ -30,24 +30,35 @@
         <main>
             <section class="qr-section">
                 <h2>Gerar QR Code para Check-in</h2>
+                
+                <form method="POST" action="{% url 'pagina_web:gerar_qrcode' %}">
+                    {% csrf_token %}
+                    
+                    <!-- Campo oculto para enviar a turma selecionada -->
+                    <input type="hidden" id="turma_selecionada" name="turma" value="">
 
-                <label for="turma">Selecione a Turma</label>
-                <select id="turma" class="dropdown">
-                    <option value="">Escolha uma turma</option>
-                    <option value="turma1">Turma 1</option>
-                    <option value="turma2">Turma 2</option>
-                    <option value="turma3">Turma 3</option>
-                </select>
+                    <label for="turma">Selecione a Turma</label>
+                    <select id="turma" class="dropdown">
+                        <option value="">Escolha uma turma</option>
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">Turma 3</option>
+                    </select>
 
-                <button class="generate-btn" onclick="gerarQRCode()">Gerar QR Code</button>
+                    <button type="submit" class="generate-btn">Gerar QR Code</button>
+                </form>
+
+                <script>
+                    // A cada vez que o valor da turma for alterado, atualize o campo oculto
+                    document.getElementById('turma').addEventListener('change', function() {
+                        document.getElementById('turma_selecionada').value = this.value;
+                    });
+                </script>
+
             </section>
         </main>
     </div>
 
-    <script>
-        function gerarQRCode() {
-            alert("Gerando QR Code para a turma selecionada...");
-        }
-    </script>
+    
 </body>
 </html>
